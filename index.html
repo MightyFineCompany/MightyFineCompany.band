@@ -8,81 +8,109 @@
         html, body {
             margin: 0;
             padding: 0;
-            height: 100%;
             font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            color: #000;
         }
 
-        body {
-            background: url('https://media.discordapp.net/attachments/1140064885397528580/1316969532954382376/AP1GczOO7Y-XtzMIaw2wEEb_3dYHL59GK7MXXFiCWf_PObzNyBRhul7X3VrapQw1123-h824-s-no-gm.png?ex=675cfaf4&is=675ba974&hm=4c86704e6efbdee2ba07c71253ce7ae4da85e22c5d79fadd7d1c31fe9c353ea2&=&format=webp&quality=lossless&width=714&height=525') no-repeat center center;
-            background-size: contain; /* Ensures the entire image is always visible */
-            background-color: #000;   /* Background color to fill empty space */
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 3em;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            margin: 0;
+        }
+
+        /* ABOUT SECTION */
+        .about {
+            padding: 2em;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .about p {
+            margin: 0;
+        }
+
+        /* LINKS SECTION */
+        .links {
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            gap: 1em;
+            padding: 2em;
         }
 
-        .description {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.65);
-            padding: 1em;
-            max-width: 600px;
-            margin: 2em;
-            border-radius: 8px;
-        }
-
-        footer {
-            width: 100%;
-            position: absolute;
-            bottom: 20px;
-            left: 0;
-            display: flex;
-            justify-content: center;
-            gap: 2em;
-        }
-
-        footer a {
+        .links a {
             display: inline-block;
-            background: rgba(0, 0, 0, 0.5);
+            background: #000;
             color: #fff;
             text-decoration: none;
-            padding: 0.5em 1em;
+            padding: 0.8em 1.2em;
             border-radius: 5px;
             transition: background 0.3s;
             font-size: 1em;
         }
 
-        footer a:hover {
-            background: rgba(0,0,0,0.7);
+        .links a:hover {
+            background: #333;
         }
 
         @media (max-width: 600px) {
-            .description {
-                margin: 1em;
-                padding: 0.8em;
+            .hero h1 {
+                font-size: 2em;
             }
 
-            footer a {
+            .about {
+                padding: 1.5em;
+            }
+
+            .links a {
                 font-size: 0.9em;
-                padding: 0.4em 0.8em;
+                padding: 0.6em 1em;
             }
         }
     </style>
 </head>
 <body>
-
-    <div class="description">
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <img src="Mighty-Fine-Company.jpg" alt="Mighty Fine Company Band">
         <h1>Mighty Fine Company</h1>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about">
         <p>
             Mighty Fine Company is a band in the making—shaped by the honest songwriting of Pamela Ryder and defined by a diverse blend of musical talents. The band has a rock and roll soul that resonates with everyday hopes, disappointments, and personal truths. Beyond their own evolving originals, they breathe fresh life into timeless covers of Buddy Holly, Little Feat, and the Grateful Dead, crafting performances that feel both familiar and warmly personal.
         </p>
-    </div>
+    </section>
 
-    <footer>
+    <!-- LINKS SECTION -->
+    <section class="links">
         <a href="https://mightyfinecompany.bandcamp.com/" target="_blank" aria-label="Bandcamp">Bandcamp</a>
         <a href="https://venmo.com/mightyfinecompany" target="_blank" aria-label="Venmo">Venmo</a>
         <a href="mailto:mightyfinecompanytheband@gmail.com" aria-label="Email">Email</a>
-    </footer>
+    </section>
 
     <script>
         console.log("Welcome to Mighty Fine Company's official webpage!");
