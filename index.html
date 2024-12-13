@@ -13,20 +13,34 @@
             color: #000;
         }
 
+        /* COMMON CONTENT CONTAINER */
+        .content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2em 1em;
+            box-sizing: border-box;
+        }
+
         /* HERO SECTION */
         .hero {
             position: relative;
-            width: 100%;
-            overflow: hidden;
+            display: flex;
+            justify-content: center;
         }
 
-        .hero img {
+        /* We use another container inside hero to position the text absolutely */
+        .hero-inner {
+            position: relative;
+            width: 100%;
+        }
+
+        .hero-inner img {
             width: 100%;
             height: auto;
             display: block;
         }
 
-        .hero h1 {
+        .hero-inner h1 {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -41,9 +55,6 @@
 
         /* ABOUT SECTION */
         .about {
-            padding: 2em;
-            max-width: 800px;
-            margin: 0 auto;
             line-height: 1.6;
         }
 
@@ -57,7 +68,6 @@
             justify-content: center;
             align-items: center;
             gap: 1em;
-            padding: 2em;
         }
 
         .links a {
@@ -76,12 +86,8 @@
         }
 
         @media (max-width: 600px) {
-            .hero h1 {
+            .hero-inner h1 {
                 font-size: 2em;
-            }
-
-            .about {
-                padding: 1.5em;
             }
 
             .links a {
@@ -94,21 +100,26 @@
 <body>
     <!-- HERO SECTION -->
     <section class="hero">
-        <img src="Mighty-Fine-Company.jpg" alt="Mighty Fine Company">
-        <h1>Mighty Fine Company</h1>
+        <div class="content hero-inner">
+            <img src="Mighty-Fine-Company.jpg" alt="Mighty Fine Company the Band">
+            <h1>Mighty Fine Company</h1>
+        </div>
     </section>
 
     <!-- ABOUT SECTION -->
-    <section class="about">
+    <section class="content about">
         <p>
             Mighty Fine Company is a band in the making—shaped by the honest songwriting of Pamela Ryder and defined by a diverse blend of musical talents. The band has a rock and roll soul that resonates with everyday hopes, disappointments, and personal truths. Beyond their own evolving originals, they breathe fresh life into timeless covers of Buddy Holly, Little Feat, and the Grateful Dead, crafting performances that feel both familiar and warmly personal.
         </p>
     </section>
 
     <!-- LINKS SECTION -->
-    <section class="links">
-        <a href="https://mightyfinecompany.bandcamp.com/" target="_blank" aria-label="Bandcamp">Bandcamp</a>
-        <a href="mailto:mightyfinecompanytheband@gmail.com" aria-label="Email">Email</a>
+    <section class="content">
+        <div class="links">
+            <a href="https://mightyfinecompany.bandcamp.com/" target="_blank" aria-label="Bandcamp">Bandcamp</a>
+            <a href="https://venmo.com/mightyfinecompany" target="_blank" aria-label="Venmo">Venmo</a>
+            <a href="mailto:mightyfinecompanytheband@gmail.com" aria-label="Email">Email</a>
+        </div>
     </section>
 
     <script>
