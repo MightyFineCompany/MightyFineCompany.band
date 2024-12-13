@@ -39,12 +39,19 @@
             margin: 0;
         }
 
+        /* CONTAINER */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+
         /* ABOUT SECTION */
         .about {
-            padding: 2em;
             max-width: 800px;
             margin: 0 auto;
             line-height: 1.6;
+            text-align: left;
         }
 
         .about p {
@@ -57,7 +64,7 @@
             justify-content: center;
             align-items: center;
             gap: 1em;
-            padding: 2em;
+            margin-top: 2em;
         }
 
         .links a {
@@ -80,7 +87,7 @@
                 font-size: 2em;
             }
 
-            .about {
+            .container {
                 padding: 1.5em;
             }
 
@@ -94,23 +101,26 @@
 <body>
     <!-- HERO SECTION -->
     <section class="hero">
-        <img src="Mighty-Fine-Company.jpg" alt="Mighty Fine Company Band">
+        <img src="MightyFineCompany.jpg" alt="Mighty Fine Company Band">
         <h1>Mighty Fine Company</h1>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section class="about">
-        <p>
-            Mighty Fine Company is a band in the making—shaped by the honest songwriting of Pamela Ryder and defined by a diverse blend of musical talents. The band has a rock and roll soul that resonates with everyday hopes, disappointments, and personal truths. Beyond their own evolving originals, they breathe fresh life into timeless covers of Buddy Holly, Little Feat, and the Grateful Dead, crafting performances that feel both familiar and warmly personal.
-        </p>
-    </section>
+    <!-- MAIN CONTENT CONTAINER -->
+    <div class="container">
+        <!-- ABOUT SECTION -->
+        <section class="about">
+            <p>
+                Mighty Fine Company is a band in the making—shaped by the honest songwriting of Pamela Ryder and defined by a diverse blend of musical talents. The band has a rock and roll soul that resonates with everyday hopes, disappointments, and personal truths. Beyond their own evolving originals, they breathe fresh life into timeless covers of Buddy Holly, Little Feat, and the Grateful Dead, crafting performances that feel both familiar and warmly personal.
+            </p>
+        </section>
 
-    <!-- LINKS SECTION -->
-    <section class="links">
-        <a href="https://mightyfinecompany.bandcamp.com/" target="_blank" aria-label="Bandcamp">Bandcamp</a>
-        <a href="https://venmo.com/mightyfinecompany" target="_blank" aria-label="Venmo">Venmo</a>
-        <a href="mailto:mightyfinecompanytheband@gmail.com" aria-label="Email">Email</a>
-    </section>
+        <!-- LINKS SECTION -->
+        <section class="links">
+            <a href="https://mightyfinecompany.bandcamp.com/" target="_blank" aria-label="Bandcamp">Bandcamp</a>
+            <a href="https://venmo.com/mightyfinecompany" target="_blank" aria-label="Venmo">Venmo</a>
+            <a href="mailto:mightyfinecompanytheband@gmail.com" aria-label="Email">Email</a>
+        </section>
+    </div>
 
     <script>
         console.log("Welcome to Mighty Fine Company's official webpage!");
